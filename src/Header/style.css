@@ -1,0 +1,94 @@
+header{
+    position: fixed;
+    top: 0;
+    height: 70px;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.header-inner{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hamburger-btn{
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 35px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: whitesmoke;
+}
+.addTransiton{
+    transform: translateX(170px);
+    transition: transform 0.5s ease-in-out;
+}
+.removeTransition{
+    transform: translateX(20px);
+    transition: transform 0.5s ease-in-out;
+}
+
+#sidebar-list{
+    background: rgba(255, 255, 255, 0.13);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    height: 90vh;
+    width: 170px;
+    position: absolute;
+    z-index: 2000;
+    right: 0;
+    top: 0;
+    margin-top: 70px;
+}
+.nav-big{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    font-weight: bold;
+}
+
+.nav-big-link{
+    cursor: pointer;
+    color: white;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+.nav-small{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    margin: auto;
+    height: 40%;
+    margin-top: 50px;
+    width: 80%;
+}
+.nav-small-link{
+    cursor: pointer;
+    color: whitesmoke;
+    padding-bottom: 5px;
+}
+.logo{
+    color: white;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 500;
+    font-size: 16;
+    padding: 6px;
+    padding-inline: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
