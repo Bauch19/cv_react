@@ -72,12 +72,38 @@ const PersonInfo = () =>{
                         <Col lg="6" sm="12">
                             <div className='proyectos-galeria'>
                                 <Row>
-                                    <Col lg='6' sm='6'><div className='proyecto-square'></div></Col>
-                                    <Col lg='6' sm='6'><div className='proyecto-square'></div></Col>
+                                    <Col lg='6' sm='6'>
+                                        <div className='proyecto-square'>
+                                            <a href='https://play.google.com/store/apps/details?id=com.birdev.autobitv2&hl=es_HN&gl=US'>
+                                                <img src={require('../img/proyecto/autobit.webp')} alt='CV' className='proyecto' />
+                                                <div className='degradado'></div>
+                                            </a>
+                                        </div>
+                                    </Col>
+                                    <Col lg='6' sm='6'>
+                                        <div className='proyecto-square'>
+                                            <a href='https://dickissbarbershop.com'>
+                                                <img src={require('../img/proyecto/dickiss.png')} alt='CV' className='proyecto' />
+                                            </a>
+                                        </div>
+                                        <div className='degradado'></div>
+                                    </Col>
                                 </Row>
                                 <Row>
-                                    <Col lg='6' sm='6'><div className='proyecto-square'></div></Col>
-                                    <Col lg='6' sm='6'><div className='proyecto-square'></div></Col>
+                                    <Col lg='6' sm='6'>
+                                        <div className='proyecto-square'>
+                                            <a href='https://skfdistributors.mx'>
+                                            <img src={require('../img/proyecto/skf.png')} alt='CV' className='proyecto' />
+                                            </a>
+                                        </div>
+                                    </Col>
+                                    <Col lg='6' sm='6'>
+                                        <div className='proyecto-square'>
+                                            <a href='https://play.google.com/store/apps/details?id=com.appmirlov01&hl=es_HN&gl=US'>
+                                                <img src={require('../img/proyecto/passer.webp')} alt='CV' className='proyecto' />
+                                            </a>
+                                        </div>
+                                    </Col>
                                 </Row>
                             </div>
                         </Col>
@@ -87,8 +113,20 @@ const PersonInfo = () =>{
                         <Col lg="6" sm="12">
                             <div className='proyectos-galeria destacados'>
                                 <Row>
-                                    <Col lg='6' sm='6'><div className='proyecto-square'></div></Col>
-                                    <Col lg='6' sm='6'><div className='proyecto-square'></div></Col>
+                                    <Col lg='6' sm='6'>
+                                        <div className='proyecto-square'>
+                                            <a href='https://dickissbarbershop.com'>
+                                                <img src={require('../img/proyecto/dickiss.png')} alt='CV' className='proyecto-destacado' />
+                                            </a>
+                                        </div>
+                                    </Col>
+                                    <Col lg='6' sm='6'>
+                                        <div className='proyecto-square'>
+                                            <a href='https://apps.apple.com/us/app/autobit/id1550987079'>
+                                                <img src={require('../img/proyecto/autobit.webp')} alt='CV' className='proyecto-destacado' />
+                                            </a>
+                                        </div>
+                                    </Col>
                                 </Row>
                             </div>
                         </Col>
