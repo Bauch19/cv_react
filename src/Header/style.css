@@ -7,6 +7,7 @@ header{
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    font-family: 'Montserrat';
 }
 .header-inner{
     width: 90%;
@@ -36,6 +37,10 @@ header{
 .removeTransition{
     transform: translateX(20px);
     transition: transform 0.5s ease-in-out;
+}
+
+.nav-link{
+    font-family: "Montserrat", Helvetica;
 }
 
 #sidebar-list{

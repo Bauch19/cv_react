@@ -25,14 +25,14 @@ body{
 }
 .ellipse-3 {
     background-color: #2d6a5f;
-    border-radius: 50px;
+    border-radius: 50%;
     box-shadow: 0px 0px 13.8px #adf1e533, 0px 0px 27.6px #adf1e533, 0px 0px 96.6px #adf1e533, 0px 0px 193.2px #145b5233,
       0px 0px 331.2px #145b5233, 0px 0px 579.6px #145b5233;
     height: 70px;
     width: 70px;
-    left: 130px;
+    left: 280px;
     position: absolute;
-    top:758px;
+    top:695px;
 }
 .ellipse-4 {
     background-color: #e7f68b;
@@ -89,19 +89,18 @@ body{
     flex-direction: row;
 }
 .imgPerson{
-    width: 100%;
     text-align: right;
     z-index: 0;
 }
 .circleOverlay {
     position: absolute;
     top: 0;
-    margin-top: 210px;
-    margin-left: 350px;
-    width: 400px;
-    height: 400px;
+    margin-top: 160px;
+    margin-left: 120px;
+    width: 300px;
+    height: 300px;
     background-color: #adf1e5; /* Color del círculo */
-    border-radius: 500px;
+    border-radius: 50%;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     box-shadow: 0px 0px 13.8px #adf1e533, 0px 0px 27.6px #adf1e533, 0px 0px 96.6px #adf1e533, 0px 0px 193.2px #145b5233,
@@ -110,12 +109,11 @@ body{
 }
 .imagenPrincipal{
     resize: cover;
-    width: 75%;
+    max-width: 540px;
 }
 .textPerson{
-    width: 100%;
-    margin-top: 50px;
     color: #CECECD;
+    margin-top: 50px;
 }
 .hola{
     color: #AF75A9;
@@ -126,14 +124,14 @@ body{
 }
 .soy{
     color: #A2ECE3;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 300;
     font-family: "Montserrat", Helvetica;
     margin-bottom: -15px;
 }
 .programador{
     color: #8296FF;
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 600;
     font-family: "Montserrat Alternates", Helvetica;
     margin-bottom: -50px;
@@ -141,59 +139,151 @@ body{
 }
 .front-end{
     color: #E2C049;
-    font-size: 120px;
+    margin-top: 20px;
+    font-size: 95px;
     font-weight: 700;
     font-family: "Montserrat", Helvetica;
     margin-left: -10px;
 }
 .banner{
     height: 200px;
-    margin-inline: 120px;
     align-self: center;
     background-color: rgba(159, 159, 159, 0.1);
     backdrop-filter: blur(6.6px);
     -webkit-backdrop-filter: blur(6.6px);
     border-radius: 8px;
-    margin-top: -20px;
     display: flex;
 }
 .imgPerson::before{
     background-color: #A2ECE3;
 }
-.banner-row{
-    flex: 1;
+.horas{
+    padding-left: 50px;
+    line-height: 2.9em;
+}
+.cert{
+    padding-left: 50px;
+    line-height: 2.9em;
 }
 .text-titulo{
     color: #D2B9B9;
-    margin-left: 50px;
-    margin-top: 35px;
-    font-size: 24px;
+    font-size: 14px;
     font-weight: 400;
     font-family: "Montserrat Alternates", Helvetica;
 }
 .numeros{
     color: #D2B9B9;
-    margin-left: 75px;
-    margin-top: -25px;
     font-size: 90px;
     font-weight: 700;
     font-family: "Montserrat", Helvetica;
 }
 .slogan{
     color: #D2B9B9;
-    margin-top: 20px;
-    margin-left: -120px;
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 600;
     font-family: "Montserrat", Helvetica;
 }
 .text-imagnar{
     font-family: 'Aquate Script PERSONAL USE ONLY', sans-serif;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 43px;
     color: #2CBDB4;
 }
 .text-programar{
     font-weight: 800;
     color: #D9AA31;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.circleOverlay:hover{
+    background-color: #2CBDB4;
+}
+.imgPerson:hover .circleOverlay{
+    background-color: #2CBDB4;
+}
+.proyecto-sec{
+    margin-top: 50px;
+}
+.proyecto-titulo{
+    font-family: 'Montserrat Alternates';
+    font-size: 14px;
+    font-weight: 500;
+    color: #E2C049;
+}
+.seccionProyecto{
+    color: #D2B9B9;
+    font-size: 64px;
+    font-family: 'Montserrat Alternates';
+    line-height: 1.2em;
+    margin-top: 20px;
+}
+.info-proyecto{
+    color: #D2B9B9;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    line-height: 1em;
+    margin-top: 40px;
+}
+.btn-ver-mas{
+    color: #D2B9B9;
+    font-family: 'Montserrat Alternates';
+    font-weight: 600;
+    margin-top: -30px;
+}
+.flecha{
+    transform: rotate(-90deg);
+    filter: invert(60%) grayscale(100%);
+    max-width: 120px;
+    resize: contain;
+}
+.proyecto-square{
+    background-color: #8296FF;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 290px;
+    height: 200px;
+}
+
+/*Para vista mobile*/
+@media (max-width: 768px) {
+    .banner {
+        height: 630px; /* Ajusta la altura según tus necesidades para dispositivos móviles */
+    }
+    .horas{
+        margin-bottom: 60px;
+        margin-left: 70px;
+    }
+    .cert{
+        margin-bottom: 60px;
+        margin-left: 70px;
+    }
+    .slogan{
+        margin-inline: 40px;
+        line-height: 1em;
+        font-size: 50px;
+        font-weight: 500;
+    }
+    .imgPerson{
+        display: none;
+    }
+    .textPerson{
+        margin-top: -50px;
+    }
+    .text-imagnar{
+        font-size: 55px;
+    }
+    .hola{
+        font-size: 50px;
+    }
+    .soy{
+        font-size: 35px;
+    }
+    .programador{
+        font-size: 50px;
+    }
+    .front-end{
+        font-size: 71px;
+    }
 }
