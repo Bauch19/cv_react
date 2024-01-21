@@ -1,15 +1,31 @@
-import React from 'react';
-import Header from '../Header/index';
+import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './style.css';
 
-const PersonInfo = () =>{
+const Home = () =>{
     const [ocupacion, setOcupacion] = React.useState('Front End');
+
+    useEffect(() => {
+        // Esta función se ejecutará cada vez que ocupacion cambie
+        const intervalo = setInterval(() => {
+            // Cambiar el texto cada 5 segundos
+            if (ocupacion === 'Front End') {
+                setOcupacion('Back End');
+            } else if (ocupacion === 'Back End'){
+                setOcupacion('Full Stack');
+            } else {
+                setOcupacion('Front End');
+            }
+        }, 5000);
+        // Limpia el intervalo cuando el componente se desmonta
+        return () => clearInterval(intervalo);
+    }, [ocupacion]); // Dependencia para el useEffect
+    
     return(
-        <body>
-            <Container>
+        <body className='body'>
+            <Container style={{backgroundColor:'#1A1818'}}>
             <div className='overlay'>
                 <div className="ellipse" />
                 <div className="ellipse-2" />
@@ -19,7 +35,6 @@ const PersonInfo = () =>{
                 <div className="ellipse-6" />
                 <div className="ellipse-7" />
                 <div className='personInfo'>
-                    <Header />
                     {/*Esta seccion es de presentacion*/}
                     <Row>
                         <Col lg="6" sm="12">
@@ -61,7 +76,7 @@ const PersonInfo = () =>{
                         </Row>
                     </div>
                     {/*Esta seccion es de proyectos*/}
-                    <Row className='proyecto-sec'>
+                    <Row className='proyecto-sec' style={{marginTop: 50}}>
                         <Col lg="6" sm="12">
                             <div className='proyectos'>
                                 <div className="proyecto-titulo">Proyectos</div>
@@ -75,7 +90,7 @@ const PersonInfo = () =>{
                                 <Row>
                                     <Col lg='6' sm='6'>
                                         <div className='proyecto-square'>
-                                            <a href='https://play.google.com/store/apps/details?id=com.birdev.autobitv2&hl=es_HN&gl=US'>
+                                            <a target='_blank' href='https://play.google.com/store/apps/details?id=com.birdev.autobitv2&hl=es_HN&gl=US'>
                                                 <img src={require('../img/proyecto/autobit.webp')} alt='CV' className='proyecto' />
                                                 <div className='degradado'></div>
                                             </a>
@@ -83,7 +98,7 @@ const PersonInfo = () =>{
                                     </Col>
                                     <Col lg='6' sm='6'>
                                         <div className='proyecto-square'>
-                                            <a href='https://dickissbarbershop.com'>
+                                            <a target='_blank' href='https://dickissbarbershop.com'>
                                                 <img src={require('../img/proyecto/dickiss.png')} alt='CV' className='proyecto' />
                                             </a>
                                         </div>
@@ -93,14 +108,14 @@ const PersonInfo = () =>{
                                 <Row>
                                     <Col lg='6' sm='6'>
                                         <div className='proyecto-square'>
-                                            <a href='https://skfdistributors.mx'>
+                                            <a target='_blank' href='https://skfdistributors.mx'>
                                             <img src={require('../img/proyecto/skf.png')} alt='CV' className='proyecto' />
                                             </a>
                                         </div>
                                     </Col>
                                     <Col lg='6' sm='6'>
                                         <div className='proyecto-square'>
-                                            <a href='https://play.google.com/store/apps/details?id=com.appmirlov01&hl=es_HN&gl=US'>
+                                            <a target='_blank' href='https://play.google.com/store/apps/details?id=com.appmirlov01&hl=es_HN&gl=US'>
                                                 <img src={require('../img/proyecto/passer.webp')} alt='CV' className='proyecto' />
                                             </a>
                                         </div>
@@ -110,20 +125,20 @@ const PersonInfo = () =>{
                         </Col>
                     </Row>
                     {/*Esta seccion es de proyectos destacados*/}
-                    <Row className='proyecto-sec-galeria'>
+                    <Row className='proyecto-sec-galeria' style={{marginTop: 50}}>
                         <Col lg="6" sm="12">
                             <div className='proyectos-galeria destacados'>
                                 <Row>
                                     <Col lg='6' sm='6'>
                                         <div className='proyecto-square'>
-                                            <a href='https://dickissbarbershop.com'>
+                                            <a target='_blank' href='https://dickissbarbershop.com'>
                                                 <img src={require('../img/proyecto/dickiss.png')} alt='CV' className='proyecto-destacado' />
                                             </a>
                                         </div>
                                     </Col>
                                     <Col lg='6' sm='6'>
                                         <div className='proyecto-square'>
-                                            <a href='https://apps.apple.com/us/app/autobit/id1550987079'>
+                                            <a target='_blank' href='https://apps.apple.com/us/app/autobit/id1550987079'>
                                                 <img src={require('../img/proyecto/autobit.webp')} alt='CV' className='proyecto-destacado' />
                                             </a>
                                         </div>
@@ -140,7 +155,7 @@ const PersonInfo = () =>{
                         </Col>
                     </Row>
                     {/*Sección de programas*/}
-                    <Row className='sec-programas' style={{marginInline: 60}}>
+                    <Row className='sec-programas' style={{marginInline: 20, marginTop: 50}}>
                         <Col lg='12' sm='12' style={{textAlign: 'center', marginBottom: 40}}>
                             <div className="proyecto-titulo">Programas dominados</div>
                         </Col>
@@ -256,7 +271,7 @@ const PersonInfo = () =>{
                         </Row>
                     </Row>
                     {/*Sección de contacto*/}
-                    <Row className='contacto-sec'>
+                    <Row className='contacto-sec' style={{marginTop: 90}}>
                         <Col lg='12' sm='12'>
                             <div className='contacto-info'>
                                 <p>
@@ -272,7 +287,7 @@ const PersonInfo = () =>{
                             </div>
                         </Col>
                         <Col lg='6' sm='6'>
-                            <a href='https://www.linkedin.com/in/enrique-bouchet-b873b9285'>
+                            <a target='_blank' href='https://www.linkedin.com/in/enrique-bouchet-b873b9285'>
                                 <button className='contacto-btn'>
                                     Contacto <img src={require('../img/flecha.png')} alt='CV' className='flecha-contacto' />
                                 </button>
@@ -282,42 +297,9 @@ const PersonInfo = () =>{
                 </div>
             </div>
             </Container>
-            <footer>
-                <Container>
-                    <Row>
-                        <Col lg="6" sm='6'>
-                            <h2>Bauch Portafolio</h2>
-                        </Col>
-                        <Col lg="6" sm='6'>
-                            <Row>
-                                <Col lg='4' sm='4'>
-                                    <h5>Redes Sociales</h5>
-                                    <Row className='redes'>
-                                        <a className='red' href='https://www.facebook.com/bauch.ventura'>Facebook</a>
-                                        <a className='red' href='https://www.instagram.com/bauchventura/'>Instagram</a>
-                                        <a className='red' href='https://www.linkedin.com/in/enrique-bouchet-b873b9285'>LinkedIn</a>
-                                    </Row>
-                                </Col>
-                                <Col lg='4' sm='4'>
-                                    <h5>Enlaces</h5>
-                                    <Row className='redes'>
-                                    <a className='red' href='https://github.com/Bauch19/cv_react'>Git Hub</a>
-                                        <a className='red' href='https://drive.google.com/file/d/18H-wCZXIZHsdeJKWcQMsnL-nyJSc8Ruu/view?usp=sharing'>Drive</a>
-                                    </Row>
-                                </Col>
-                                <Col lg='4' sm='4'>
-                                    <h5>Curriculum</h5>
-                                    <Row className='redes'>
-                                        <a className='red' href='https://drive.google.com/file/d/18H-wCZXIZHsdeJKWcQMsnL-nyJSc8Ruu/view?usp=sharing'>Curriculum Vitae</a>
-                                    </Row>
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Container>
-            </footer>
+            
         </body>
     );
 }
 
-export default PersonInfo;
+export default Home;

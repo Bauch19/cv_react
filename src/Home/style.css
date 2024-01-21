@@ -1,4 +1,4 @@
-body{
+.body{
     background-color: #1A1818;
 }
 .ellipse {
@@ -6,7 +6,7 @@ body{
     border-radius: 50px;
     box-shadow: 0px 0px 13.8px #adf1e533, 0px 0px 27.6px #adf1e533, 0px 0px 96.6px #adf1e533, 0px 0px 193.2px #145b5233,
       0px 0px 331.2px #145b5233, 0px 0px 579.6px #145b5233;
-    right: 480px;
+    right: 35%;
     position: absolute;
     top: 200px;
     width: clamp(8px, 80px, 80px);
@@ -17,22 +17,22 @@ body{
     border-radius: 50%;
     box-shadow: 0px 0px 13.8px #adf1e533, 0px 0px 27.6px #adf1e533, 0px 0px 96.6px #adf1e533, 0px 0px 193.2px #145b5233,
       0px 0px 331.2px #145b5233, 0px 0px 579.6px #145b5233;
-    height: 120px;
-    width: 120px;
+    height: 20px;
+    width: 20px;
     position: absolute;
-    left: 120px;
-    top: 10px;
+    left: 15%;
+    top: 150px;
 }
 .ellipse-3 {
     background-color: #2d6a5f;
     border-radius: 50%;
     box-shadow: 0px 0px 13.8px #adf1e533, 0px 0px 27.6px #adf1e533, 0px 0px 96.6px #adf1e533, 0px 0px 193.2px #145b5233,
       0px 0px 331.2px #145b5233, 0px 0px 579.6px #145b5233;
-    height: 70px;
-    width: 70px;
-    left: 280px;
+    height: 50px;
+    width: 50px;
+    left: 11.5%;
     position: absolute;
-    top:695px;
+    top: 670px;
 }
 .ellipse-4 {
     background-color: #e7f68b;
@@ -52,9 +52,9 @@ body{
       0px 0px 331.2px #145b5233, 0px 0px 579.6px #145b5233;
     height: 45px;
     width: 45px;
-    left: 290px;
+    left: 80%;
     position: absolute;
-    top: 1830px;
+    top: 1700px;
 }
 .ellipse-6 {
     background-color: #893c81;
@@ -64,7 +64,7 @@ body{
     height: 80px;
     width: 80px;
     position: absolute;
-    left: 950px;
+    left: 75%;
     top: 415px;
 }
 .ellipse-7 {
@@ -75,11 +75,10 @@ body{
     height: 33px;
     width: 33px;
     position: absolute;
-    left: 1200px;
-    top: 2300px;
+    left: 50%;
+    top: 2000px;
 }
 .personInfo{
-    padding: 150px;
     padding-inline: 40px;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
@@ -95,8 +94,8 @@ body{
 .circleOverlay {
     position: absolute;
     top: 0;
-    margin-top: 160px;
-    margin-left: 150px;
+    margin-top: 60px;
+    margin-left: 100px;
     width: 300px;
     height: 300px;
     background-color: #adf1e5; /* Color del círculo */
@@ -113,6 +112,7 @@ body{
 }
 .textPerson{
     color: #CECECD;
+    margin-left: 20px;
     margin-top: 50px;
 }
 .hola{
@@ -140,7 +140,7 @@ body{
 .front-end{
     color: #E2C049;
     margin-top: 20px;
-    font-size: 95px;
+    font-size: 90px;
     font-weight: 700;
     font-family: "Montserrat", Helvetica;
     margin-left: -10px;
@@ -218,7 +218,7 @@ body{
 }
 .seccionProyecto{
     color: #D2B9B9;
-    font-size: 64px;
+    font-size: 40px;
     font-family: 'Montserrat Alternates';
     line-height: 1.2em;
     margin-top: 20px;
@@ -227,19 +227,19 @@ body{
     color: #D2B9B9;
     font-family: 'Montserrat';
     width: 70%;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.3em;
     margin-top: 40px;
 }
 .btn-ver-mas{
     color: #D2B9B9;
     font-family: 'Montserrat Alternates';
-    font-weight: 600;
+    font-weight: 200;
     margin-top: 20px;
 }
 .flecha{
     filter: invert(60%) grayscale(100%);
-    max-width: 120px;
+    max-width: 60px;
     resize: contain;
     margin-left: 10px;
 }
@@ -265,7 +265,7 @@ body{
     margin-right: 20px;
     border-radius: 10px;
     width: 100%;
-    height: 280px;
+    height: 200px;
     object-fit: cover;
     filter: grayscale(100%);
 }
@@ -279,7 +279,7 @@ a img:hover{
     z-index: -1;
 }
 .destacados .proyecto-square{
-    height: 280px;
+    height: 200px;
 }
 .sec-programas{
     margin-top: 80px;
@@ -294,7 +294,7 @@ a img:hover{
 .contacto-info{
     color: #D2B9B9;
     font-family: 'Montserrat-Light';
-    font-size: 100px;
+    font-size: 70px;
 }
 .contacto-footer{
     margin-top: 30px;
@@ -309,18 +309,20 @@ a img:hover{
     border: 0;
     border-radius: 50px;
     font-family: 'Montserrat Alternates';
-    font-weight: 600;
+    font-weight: 500;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-inline: 20px;
     position: absolute;
     right: 0;
+    margin-right: 50px;
+    margin-top: -15px;
 }
 .contacto-btn div{
     color: #1A1818;
 }
 .flecha-contacto{
-    max-width: 120px;
+    max-width: 70px;
     resize: contain;
     margin-left: 10px;
 }
@@ -372,14 +374,14 @@ a.red:hover{
 
 .layer span,
 .text {
-    color: #1da1f2;
-    border-color: #1da1f2;
+    color: #2CBDB4;
+    border-color: #2CBDB4;
     width: 75px;
     height: 75px;
 }
 
 .icon:hover.layer span {
-    box-shadow: -1px 1px 3px #1da1f2;
+    box-shadow: -1px 1px 3px #2CBDB4;
     width: 75px;
     height: 75px;
 }
@@ -421,7 +423,7 @@ a.red:hover{
     font-size: 50px;
     line-height: 64px;
     text-align: center;
-    fill: #1da1f2;
+    fill: #2CBDB4;
     background: #000;
     width: 75px;
     height: 75px;

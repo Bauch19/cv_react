@@ -9,6 +9,21 @@ header{
     justify-content: center;
     font-family: 'Montserrat';
 }
+.link:hover{
+    color: blue;
+}
+.nav-links {
+    display: inline-block;
+    background-color:transparent;
+    margin-right: 20px;
+    color: #D2B9B9;
+    
+}
+.nav-links:hover {
+    color: #2CBDB4;
+    font-weight: bold;
+    transition: all 1s;
+}
 .header-inner{
     width: 90%;
     display: flex;
