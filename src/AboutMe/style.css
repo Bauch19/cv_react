@@ -1,0 +1,66 @@
+.bg-transparent{
+    background-color: transparent;
+    border: 0;
+    color: #2CBDB4;
+    font-family: 'Montserrat';
+}
+.bg-transparent h2{
+    color: #2CBDB4;
+}
+.bg-transparent p{
+    color: #D2B9B9;
+    font-family: 'Montserrat Alternates';
+    font-weight: 300;
+}
+.img-profile{
+    width: 100%;
+}
+a.btn-ver-mas{
+    color: #1A1818;
+    background-color: #2CBDB4;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    padding-inline: 50px;
+    text-decoration: none;
+}
+a.btn-ver-mas:hover{
+    color: #2CBDB4;
+    font-weight: 500;
+    background-color: rgba(44, 189, 180, 0.3);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    padding-inline: 50px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(44, 189, 180, 0.4) !important;
+    border-radius: 50%;
+}
+.iconos svg {
+    color: #1A1818;
+    font-size: 20px;
+}
+.tab-titulo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.nav-pills .nav-link{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #D2B9B9;
+}
+.nav-pills .nav-link.active {
+    background-color: rgba(44, 189, 180, 0.1) !important;
+    color: #2CBDB4 !important;
+}

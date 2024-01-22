@@ -1,19 +1,25 @@
-import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Image from 'react-bootstrap/Image';
 import './style.css'
 
 function Header() {
+  const [hovered, setHovered] = useState(false);
   return (
     <>
       {['lg'].map((expand) => (
         <Navbar key={expand} expand={expand} className="mb-3 text-white" style={{backgroundColor:'transparent', paddingTop:40, paddingInline: 90}}>
           <Container>
             <Navbar.Brand as={NavLink} to="/" className="text-white" style={{fontFamily:'Montserrat'}} href="#">
-                <Button variant="outline-light" style={{borderRadius:50, paddingInline:20}}>Bauch</Button>
+                <Image src={hovered ? require('../img/logo/logo_bauch_hover.png') : require('../img/logo/logo_bauch.png')}
+                      style={{ width: '120px' }}
+                      rounded
+                      onMouseOver={() => setHovered(true)}
+                      onMouseOut={() => setHovered(false)} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas

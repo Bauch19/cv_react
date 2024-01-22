@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 import './style.css';
 
 const Footer = () =>{
@@ -10,7 +11,7 @@ const Footer = () =>{
             <Container>
                 <Row>
                     <Col lg="6" sm='6'>
-                        <h2>Bauch Portafolio</h2>
+                        <Image src={require('../img/logo/bauch.png')} className='img-responsive' rounded />
                     </Col>
                     <Col lg="6" sm='6'>
                         <Row>
