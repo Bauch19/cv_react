@@ -1,25 +1,46 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import SplitType from 'split-type';
+import gsap from 'gsap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Image from 'react-bootstrap/Image';
 import './style.css'
 
-function Header() {
-  const [hovered, setHovered] = useState(false);
+function Header({expand}) {
+  useEffect(() => {
+    // Configura la animación para el texto del Navbar.Brand
+    const headerBrand = document.querySelector(".bauch");
+    const headerBrandSplit = new SplitType(headerBrand, { types: "lines" });
+    gsap.from(headerBrandSplit.lines, {
+      y: -100,
+      autoAlpha: 0,
+      stagger: 0.1,
+      ease: "power3.out",
+      duration: 2,
+    });
+
+    // Configura la animación para los enlaces Nav.Link
+    const navLinks = document.querySelectorAll(".nav-links");
+    navLinks.forEach((link) => {
+      const linkSplit = new SplitType(link, { types: "lines" });
+      gsap.from(linkSplit.lines, {
+        y: -100,
+        autoAlpha: 0,
+        stagger: 0.1,
+        ease: "power3.out",
+        duration: 2,
+      });
+    });
+  }, [expand]);
   return (
     <>
       {['lg'].map((expand) => (
         <Navbar key={expand} expand={expand} className="mb-3 text-white" style={{backgroundColor:'transparent', paddingTop:40, paddingInline: 90}}>
           <Container>
             <Navbar.Brand as={NavLink} to="/" className="text-white" style={{fontFamily:'Montserrat'}} href="#">
-                <Image src={hovered ? require('../img/logo/logo_bauch_hover.png') : require('../img/logo/logo_bauch.png')}
-                      style={{ width: '120px' }}
-                      rounded
-                      onMouseOver={() => setHovered(true)}
-                      onMouseOut={() => setHovered(false)} />
+              <div className='nav-links bauch'>Bauch</div>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -31,7 +52,9 @@ function Header() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Bauch
+                    <Nav.Link as={NavLink} to="/">
+                        <div className='nav-links'>Bauch</div>
+                    </Nav.Link>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>

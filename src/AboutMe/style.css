@@ -64,3 +64,6 @@ a.btn-ver-mas:hover{
     background-color: rgba(44, 189, 180, 0.1) !important;
     color: #2CBDB4 !important;
 }
+.bauch{
+    border: 0.5px solid #D2B9B9;
+}
