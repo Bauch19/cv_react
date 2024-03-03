@@ -124,8 +124,8 @@ const Home = () =>{
                                     </Col>
                                     <Col lg='6' sm='6'>
                                         <div className='proyecto-square'>
-                                            <a target='_blank' href='https://dickissbarbershop.com'>
-                                                <img src={require('../img/proyecto/dickiss.png')} alt='CV' className='proyecto' />
+                                            <a target='_blank' href='https://solutionfactory.skfdistributors.mx/'>
+                                            <img src={require('../img/proyecto/skf.png')} alt='CV' className='proyecto' />
                                             </a>
                                         </div>
                                         <div className='degradado'></div>
@@ -134,7 +134,7 @@ const Home = () =>{
                                 <Row>
                                     <Col lg='6' sm='6'>
                                         <div className='proyecto-square'>
-                                            <a target='_blank' href='https://skfdistributors.mx'>
+                                            <a target='_blank' href='https://skfdistributors.mx/new_home'>
                                             <img src={require('../img/proyecto/skf.png')} alt='CV' className='proyecto' />
                                             </a>
                                         </div>
